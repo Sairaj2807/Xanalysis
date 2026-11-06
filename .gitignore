@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+logs/
+artifacts/
+*.db
+data/raw/
+data/processed/
+data/aggregated/
+data/model_ready/
+/data/*.csv
+.pytest_cache/
