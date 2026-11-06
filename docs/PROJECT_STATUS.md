@@ -49,7 +49,8 @@ Answers to all 12 questions: [RESEARCH_FINDINGS](research/RESEARCH_FINDINGS.md).
 - Tests: **101 passing** ([TESTING_STATUS](engineering/TESTING_STATUS.md)). Untested: live APIs, PostgreSQL, dashboard visuals, the documentation validator.
 - Pipeline: orchestrator run on real state (skips completed stages); a cold full run was not performed.
 - Automation/monitoring: scheduler and monitors exist and are tested; no deployed service.
-- Version control: `origin` set, **no commits by instruction** (DEC-011).
+- Version control: the owner committed and pushed to `origin` (https://github.com/Sairaj2807/Xanalysis.git, branch `main`) on 2026-11-06; local and remote were identical afterwards. Agents still do not commit or push unless asked (DEC-011).
+- **Not on GitHub (excluded by `.gitignore`):** the large data under `data/raw|processed|aggregated|model_ready`, `artifacts/`, `logs/`, `.venv` and `.env`. Anyone cloning the repo must regenerate these by running the pipeline (`scripts/run_pipeline.py`). Credentials are never stored in the repo.
 
 ## Risks and limitations
 1. Low statistical power at daily frequency (EXP-013): small effects cannot be excluded.

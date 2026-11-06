@@ -13,6 +13,9 @@ Last updated: 2026-11-05
 9. **Data coverage:** AAPL tweets 2015-01-01..2019-12-31 (1,424,481; primary filter 663,144); prices 2014-10-01..2020-01-31; news none; DB schema + migrations, pipeline data in Parquet.
 10. **Next five priorities:** (1) live Apify run [needs user] (2) Tavily news + model D [needs user] (3) human label review [needs user] (4) PostgreSQL test (5) cold full pipeline run + config-driven constants.
 
+## Repository state (2026-11-06)
+The owner pushed the project to GitHub (`origin` = https://github.com/Sairaj2807/Xanalysis.git, `main`); local and remote matched afterwards. **Files excluded by `.gitignore` are not on GitHub:** the large data under `data/raw|processed|aggregated|model_ready`, `artifacts/`, `logs/`, `.venv` and `.env`. Anyone cloning the repo has to regenerate those by running the pipeline. The README on GitHub was not inspected after the merge (the remote had a one-line auto-created README; the local one was meant to win), so confirm it on the repo page. Agents still do not commit or push unless asked (DEC-011).
+
 ## Immediate blockers
 Credentials and human label review (both owner-supplied). Nothing blocks reading, testing or re-running the existing pipeline.
 

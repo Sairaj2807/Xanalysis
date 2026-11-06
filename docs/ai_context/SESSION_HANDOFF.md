@@ -19,6 +19,9 @@ Audit; ingestion (CSV loader with record recovery, yfinance + incremental update
 - Docs: `generate_codebase_map.py`, `generate_project_status.py`, `update_project_context.py`, `validate_documentation.py` (0 errors, 0 warnings at the end).
 - Git: `git init` + `git remote add origin https://github.com/Sairaj2807/Xanalysis.git` only.
 
+## Repository state (2026-11-06)
+The owner committed and pushed to GitHub (`main`, merge commit of the project commit with GitHub's auto-created "Initial commit"). Local and `origin/main` were identical afterwards. **Files excluded by `.gitignore` are not on GitHub:** the large data under `data/raw|processed|aggregated|model_ready`, `artifacts/`, `logs/`, `.venv` and `.env`. Anyone cloning the repo has to regenerate those by running the pipeline. Open item: the GitHub README was not inspected after the merge (a README add/add conflict was resolved in favour of the local one); confirm it on the repo page. Agents still must not commit or push unless asked (DEC-011).
+
 ## Test results
 `pytest -q`: **101 passed** (16 files, ~33 s). Real-data runs produced the artifacts listed in [EXPERIMENT_LOG](../history/EXPERIMENT_LOG.md) under `artifacts/runs/` and `artifacts/analysis/`. Real runs exposed bugs that tests did not (BUG-008/009), so rerun the real stage after changing pipeline code.
 
